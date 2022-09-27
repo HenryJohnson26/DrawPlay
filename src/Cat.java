@@ -27,7 +27,7 @@ public class Cat {
 		int x=catX;
 		int y=catY;
 		// Draw the head
-		g2.setColor(Color.black);
+		g2.setColor(Color.orange);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
 		
 		g2.fillPolygon(new int[] {55, 50, 90}, new int[] {100, 20, 50}, 3);
@@ -35,7 +35,7 @@ public class Cat {
 		
 		
 		// Draw the eyes
-		g2.setColor(Color.green);
+		g2.setColor(Color.red);
 		x = catX + EYE_X; 
 		y = catY + EYE_Y;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
