@@ -41,6 +41,9 @@ public class Cat {
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
 		x += EYE_SEPARATION;
 		g2.fillOval(x, y, EYE_WIDTH, EYE_HEIGHT);
+		
+	
+		g2.fillPolygon(new int[] {catX + MOUTH_X + 7, catX + MOUTH_X + 2, catX + MOUTH_X + 11}, new int[] {catY + MOUTH_Y - 7, catY + MOUTH_Y - 9, catY + MOUTH_Y - 9}, 3);
 		//pupils
 		x -= EYE_SEPARATION;
 		g2.setColor(Color.black);
