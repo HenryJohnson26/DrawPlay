@@ -1,8 +1,10 @@
 import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.geom.*;
+import javax.swing.*;
 
-public class Cat {
+
+public class Cat extends JFrame{
 	// drawing constants are private - no one needs to know what we're doing
 	// pick a head dimension
 	private static final int HEAD_DIMENSION = 90;
@@ -26,10 +28,17 @@ public class Cat {
 		Graphics2D g2 = (Graphics2D) g;
 		int x=catX;
 		int y=catY;
+		
+		ImageIcon lasagna = new ImageIcon(getClass().getResource("meat-lasagna-1200.jpg"));
+		JLabel lasagnaLable = new JLabel(lasagna);
+		add(lasagnaLable);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		pack();
 		// Draw the head
 		g2.setColor(Color.orange);
 		g2.fillOval(x, y, HEAD_DIMENSION, HEAD_DIMENSION);
-		
+	
 		g2.fillPolygon(new int[] {55, 50, 90}, new int[] {100, 20, 50}, 3);
 		g2.fillPolygon(new int[] {115, 100, 140}, new int[] {100, 50, 20}, 3);
 		
@@ -60,5 +69,7 @@ public class Cat {
 		// so it doesn't overlap the drawing
 		g2.drawString("GIMME LASAGNA NOW", catX, catY+HEAD_DIMENSION+10);
 		g2.drawString("ugh mondays", catX, catY + HEAD_DIMENSION + 20);
+		
+		
 	}
 }
